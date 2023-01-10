@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
+
+$primary-color: #8e3939;
+$secondary-color: #bd9797;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient($primary-color, $secondary-color);
+  padding: 40px;
+}
+
+.wrapper {
+  min-height: calc(100vh - 40px * 2);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.form-wrapper.sign-up {
+  min-height: calc(100vh - 40px * 2);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.login-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 150px;
+    background-color: white;
+    transition: 1s ease-in-out;
+  }
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 150px;
+    background-color: white;
+    transition: 1s ease-in-out;
+  
+}
+
+    .wrapper.active .form-wrapper.login-left {
+      transform: scale(0) translate(-300px, 500px);
+    }
+
+    .wrapper .form-wrapper.sign-up {
+      position: absolute;
+      transform: scale(0) translate(200px, -500px);
+    }
+
+    .wrapper.active .form-wrapper.form-wrapper.sign-up {
+      transform: scale(1) translateY(0);
+    }
+
+    .login-header {
+      margin-bottom: 50px;
+
+      h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        opacity: 0.7;
+        display: inline-block;
+      }
+    }
+
+    .signUp-link {
+      text-align: left;
+      margin-top: -52px;
+      margin-bottom: 83px;
+    }
+
+    .login-form {
+      width: 450px;
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+      }
+
+      &-footer {
+        display: flex;
+        gap: 30px;
+        margin-top: 70px;
+
+        a.fb {
+          flex: 6;
+          gap: 15px;
+          border-radius: 100px;
+          padding: 0.6rem;
+          justify-content: center;
+          border: 1px solid black;
+          display: flex;
+          align-items: center;
+          color: black;
+          text-decoration: none;
+          background-color: #4267b2;
+          &:hover {
+            background-color: #eeeeee;
+                span.fb{
+                    color: black;
+                }
+                .bxl-facebook-circle{
+                    color: #4267b2;
+                }
+
+          }
+
+          span.fb {
+            color: white;
+          }
+
+          .bxl-facebook-circle {
+            font-size: 2rem;
+            color: white;
+
+          }
+          span.g {
+            color: white;
+          }
+        }
+        a.g {
+          flex: 6;
+          gap: 15px;
+          border-radius: 100px;
+          padding: 0.6rem;
+          justify-content: center;
+          border: 1px solid black;
+          display: flex;
+          align-items: center;
+          color: black;
+          text-decoration: none;
+          background-color: white;
+
+          &:hover {
+            background-color: #eeeeee;
+          }
+          img.google {
+            width: 27px;
+          }
+        }
+      }
+    }
+
+    .form-item label:not(.checkboxLabel) {
+      display: inline-block;
+      background-color: white;
+      margin-bottom: 10px;
+      position: absolute;
+      padding: 0 10px;
+      transform: translate(30px, -20px);
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      position: relative;
+      border: 1px solid black;
+      outline: none;
+      height: 55px;
+      padding: 0 2rem;
+      border-radius: 100px;
+      width: 100%;
+      transition: background 0.5s;
+      font-size: 18px;
+
+      &:focus {
+        border-color: $primary-color;
+      }
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: $primary-color;
+    }
+
+    .bx-hide:before {
+      position: absolute;
+      top: 48.15%;
+      left: 606px;
+      font-size: 21px;
+      color: #8b8b8b;
+    }
+
+    .bx-show::before {
+      position: absolute;
+      top: 48.15%;
+      left: 606px;
+      font-size: 21px;
+      color: #8b8b8b;
+    }
+
+    button {
+      border: 1px solid black;
+      background: linear-gradient(45deg, $primary-color, $secondary-color);
+      color: white;
+      padding: 1rem;
+      border-radius: 100px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 18px;
+      height: 55px;
+      cursor: pointer;
+
+      &:hover {
+        background: #eeeeee;
+        color: black;
+      }
+    }
+
+    .login-right {
+      background-color: #eeeeee;
+      display: flex;
+      flex-direction: column;
+
+      .Top {
+        font-size: 75px;
+        margin-bottom: -24px;
+        text-align: center;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      .Middle {
+        font-size: 40px;
+        margin-bottom: -20px;
+        text-align: center;
+        margin-bottom: 0px;
+      }
+    }
+
+    // .login-right::before {
+    //   background-image: url(goldengate.png);
+    //   background-repeat: no-repeat;
+    //   background-size: 50%;
+    //   background-position: right;
+    //   position: absolute;
+    //   top: 0;
+    //   bottom: 0;
+    //   left: 0;
+    //   right: 0;
+    //   opacity: 0.25;
+    // }
+    @media (max-width: 1350px) {
+      .login-left {
+        padding: 50px !important;
+      }
+
+      .login-form {
+        width: 100%;
+
+        &-footer {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      .wrapper {
+        grid-template-columns: auto;
+      }
+      .login-right {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  
+
